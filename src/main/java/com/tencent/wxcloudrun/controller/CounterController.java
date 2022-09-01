@@ -80,8 +80,9 @@ public class CounterController {
     }
 
     @GetMapping("/api/hello")
-    public ApiResponse hello() {
-      return ApiResponse.ok("<h1>Hello 微信云托管！</h1>");
+    public ApiResponse hello(String name) {
+        String text = "Hello " + name;
+      return ApiResponse.ok(text);
     }
 
 }
